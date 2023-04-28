@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Alta de Hijo</h2>
+    </div>
+
+    <div class="card-body">
+      <form>
+
+        <div class="form-group">
+          <label for="idHijo">Id Hijo</label>
+          <input type="number" class="form-control" name="idPadre" [(ngModel)]="hijo.idHijo">
+        </div>
+
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" name="nombre" [(ngModel)]="hijo.nombre">
+        </div>
+
+        <div class="form-group">
+          <label for="app">Apellido Paterno</label>
+          <input type="text" class="form-control" name="app" [(ngModel)]="hijo.app">
+        </div>
+
+        <div class="form-group">
+          <label for="edad">Edad</label>
+          <input type="number" class="form-control" name="edad" [(ngModel)]="hijo.edad">
+        </div>
+
+        <div class="form-group">
+          <label for="hobbie">Hobbie</label>
+          <input type="text" class="form-control" name="hobbieo" [(ngModel)]="hijo.hobbie">
+        </div>
+
+        <div class="form-group">
+          <label for="padre">Selecciona El Padre</label>
+          <select [(ngModel)]="hijo.padre" class="form-control" name="padre">
+            <option [ngValue]="undefined">--- Selecciona El Padre ---</option>
+            <option *ngFor="let b of padre" [ngValue]="b" >{{b.nombre}}</option>
+          </select>
+
+        </div>
+
+        <br>
+        <button class="btn btn-outline-primary" (click)="guardar()">Guardar</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+

@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Listado De Padres</h2>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Padre Id</th>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno </th>
+            <th>Edad</th>
+            <th>Trabajo</th>
+
+            <th>Editar</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of padre">
+            <td>{{p.idPadre}}</td>
+            <td>{{p.nombre}}</td>
+            <td>{{p.app}}</td>
+            <td>{{p.apm}}</td>
+            <td>{{p.edad}}</td>
+            <td>{{p.trabajo}}</td>
+
+            <td><button  class="btn btn-outline-warning" (click)="editar(p)">Editar</button></td>
+            <td><button class="btn btn-outline-danger" (click)="eliminar(p)">Eliminar</button></td>
+
+
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
+
+

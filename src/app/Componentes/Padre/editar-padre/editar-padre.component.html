@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Editar Padre</h2>
+    </div>
+
+    <div class="card-body">
+      <form>
+
+        <div class="form-group">
+          <label for="idPadre">Id Padre</label>
+          <input type="number" class="form-control" name="idPadre" [(ngModel)]="padre.idPadre">
+        </div>
+
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" name="nombre" [(ngModel)]="padre.nombre">
+        </div>
+
+        <div class="form-group">
+          <label for="app">Apellido Paterno</label>
+          <input type="text" class="form-control" name="app" [(ngModel)]="padre.app">
+        </div>
+
+        <div class="form-group">
+          <label for="apm">Apellido Materno</label>
+          <input type="text" class="form-control" name="apm" [(ngModel)]="padre.apm">
+        </div>
+
+        <div class="form-group">
+          <label for="edad">Edad</label>
+          <input type="text" class="form-control" name="edad" [(ngModel)]="padre.edad">
+        </div>
+
+        <div class="form-group">
+          <label for="trabajo">Trabajo</label>
+          <input type="text" class="form-control" name="trabajo" [(ngModel)]="padre.trabajo">
+        </div>
+        <br>
+        <button class="btn btn-outline-primary" (click)="editar()">Editar</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
